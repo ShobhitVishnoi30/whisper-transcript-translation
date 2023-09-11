@@ -1,31 +1,3 @@
-# import whisper
-# model = whisper.load_model("small")
-
-# options = dict(language='hi')
-# transcribe_options = dict(task="transcribe", **options)
-# translate_options = dict(task="translate", **options)
-
-
-# transcription = model.transcribe("long.mp3", **transcribe_options)["text"]
-# translation = model.transcribe("hindi+english.mp3", **translate_options)["text"]
-    
-
-# print("transacription is =>",transcription)
-# print("translation is => ",translation)
-
-# result = model.transcribe("greetings.mp3",language='hi')
-# print(result["text"])
-# # load audio and pad/trim it to fit 30 seconds
-# audio = whisper.load_audio("greetings.mp3")
-# audio = whisper.pad_or_trim(audio)
-
-# # make log-Mel spectrogram and move to the same device as the model
-# mel = whisper.log_mel_spectrogram(audio).to(model.device)
-
-# # detect the spoken language
-# _, probs = model.detect_language(mel)
-# print(f"Detected language: {max(probs, key=probs.get)}")
-
 import whisper
 import os
 import shutil
